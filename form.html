@@ -16,7 +16,7 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 async function submit() {
-  var name = document.getElementById("name").value
+  var name = document.getElementById("fname").value
   var userform = document.getElementById("inputs");
   var subbutton = document.getElementById("submitButton");
   var mid = document.getElementById("middle")
@@ -63,7 +63,7 @@ async function submit() {
     	location.href = "ravenclaw.html";}
 	else if(name == "Ryan"){
 	location.href = "hufflepuff.html";
-	}else if(name == "Ronel"{
+	}else if(name == "Ronel"){
 	location.href = "slytherin.html";
 	}else{
 	location.href = "gryffindor.html"
