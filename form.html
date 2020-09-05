@@ -20,20 +20,44 @@ async function submit() {
   var userform = document.getElementById("inputs");
   var subbutton = document.getElementById("submitButton");
   var mid = document.getElementById("middle")
-  var calculating = document.createElement("H2");   // Create a <button> element
-  var text = document.createTextNode("calculating...");
-  var image = document.createElement('IMG');
-  image.src = 'calculating.GIF'; 
+  var calculating = document.createElement("H1");   // Create an H2 element
+  var text1 = document.createTextNode("calculating.");
+  calculating.id = "calcu"
+  var text2 = document.createTextNode("calculating..");
+  calculating.id = "calcu1"
+  var text3 = document.createTextNode("calculating...");
+  calculating.id = "calcu2"
+  // var image = document.createElement('IMG');
+  // image.src = 'calculating.GIF'; 
   userform.remove();
   subbutton.remove();
 
-  calculating.appendChild(text);
+  calculating.appendChild(text1);
+  // mid.appendChild(image)
 
-  mid.appendChild(image)
+  
+ 	
   mid.appendChild(calculating)
 
-  await sleep(3000);
-  // location.reload();
+  // await sleep(10000);
+
+  for (let i = 0; i < 6; i++) {
+  	await sleep(600);
+  	calculating.remove()
+    if (i%3==0){
+    	calculating.replaceChild(text2,text1)
+    }
+    else if(i%3==1){
+    	calculating.replaceChild(text3,text2)
+    }
+    else{
+    	calculating.replaceChild(text1,text3)
+    }
+    mid.appendChild(calculating)
+    
+  }
+
+
   console.log(name)
   	if(name == "Dodan"){
     	location.href = "hedgehog.html";}
