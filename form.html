@@ -60,11 +60,13 @@ async function submit() {
 
   console.log(name)
   	if(name == "Dodan"){
-    	location.href = "hedgehog.html";}
+    	location.href = "ravenclaw.html";}
 	else if(name == "Ryan"){
-	location.href = "cow.html";
+	location.href = "hufflepuff.html";
+	}else if(name == "Ronel"{
+	location.href = "slytherin.html";
 	}else{
-	location.href = "goat.html";
+	location.href = "gryffindor.html"
 	}
 				}
 </script>
@@ -78,11 +80,13 @@ async function submit() {
 			<form id = "inputs">
 			<h2 class = "title">Who u?</h1>
 			<label>First Name:</label><br>
-			<input type="text" name="fname" id="name" class = "rounded"><br>
+			<input type="text" name="fname" id="fname" class = "rounded"><br>
 			<label>Last Name:</label><br>
-			<input type="text" name="fname" id="name" class = "rounded"><br>
+			<input type="text" name="fname" id="lname" class = "rounded"><br>
 			<label for="birthday">Birthday:</label><br>
 			<input type="date" id="birthday" name="birthday" class = "rounded">
+			<label>Favorite Color:</label><br>
+			<input type="text" name="fname" id="color" class = "rounded"><br>
 			</form>
 			<br><br>
 			<button type="button" onclick="submit()" id = "submitButton">Submit</button>
