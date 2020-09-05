@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Redirect Test</title>
+</head>
+<body>
+<script>
+function submit() {
+  var name = document.getElementById("name").value
+  console.log(name)
+  if(name == "Dodan"){
+    	location.href = "hedgehog.html";}
+	else if(name == "Ryan"){
+	location.href = "cow.html";
+	}else{
+	location.href = "goat.html";
+	}}
+</script>
+<form id = "inputs">
+<label>First name:</label><br>
+<input type="text" name="fname" id=name><br>
+</form>
+<button type="button" onclick="submit()">Submit</button>
+
+
+
+</body>
+</html>
