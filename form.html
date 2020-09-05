@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UP PUGAD Sayk Application</title>
+
+	<!-- Bootstrap CSS CDN -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<script>
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+async function submit() {
+  var name = document.getElementById("name").value
+  var userform = document.getElementById("inputs");
+  var subbutton = document.getElementById("submitButton");
+  var mid = document.getElementById("middle")
+  var calculating = document.createElement("H2");   // Create a <button> element
+  var text = document.createTextNode("calculating...");
+  var image = document.createElement('IMG');
+  image.src = 'calculating.GIF'; 
+  userform.remove();
+  subbutton.remove();
+
+  calculating.appendChild(text);
+
+  mid.appendChild(image)
+  mid.appendChild(calculating)
+
+  await sleep(3000);
+  // location.reload();
+  console.log(name)
+  	if(name == "Dodan"){
+    	location.href = "hedgehog.html";}
+	else if(name == "Ryan"){
+	location.href = "cow.html";
+	}else{
+	location.href = "goat.html";
+	}
+				}
+</script>
+
+<body>
+
+	<div class = "col" style = "height:33%"></div>
+	<div class = "row">
+		<div class = "col"></div>
+		<div class = "col text-center" id = "middle">
+			<form id = "inputs">
+			<h2 class = "title">Who u?</h1>
+			<label>First Name:</label><br>
+			<input type="text" name="fname" id="name" class = "rounded"><br>
+			<label>Last Name:</label><br>
+			<input type="text" name="fname" id="name" class = "rounded"><br>
+			<label for="birthday">Birthday:</label><br>
+			<input type="date" id="birthday" name="birthday" class = "rounded">
+			</form>
+			<br><br>
+			<button type="button" onclick="submit()" id = "submitButton">Submit</button>
+		</div>
+		<div class = "col"></div>
+	</div>
+
+</body>
+</html>
