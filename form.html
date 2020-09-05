@@ -15,8 +15,23 @@
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
+
+
 async function submit() {
+
+  // As of now it uses the fname(first name) of the applicant to determine the result
+  // In my opinion, the safest way to ensure na each applicant goes to where they should
+  // Is by getting their ID numbers (note that that should add the dash though) 
+  // since that is unique. If first name kasi they might
+  // Put other things. For example I have two first names, sometimes people use the first or
+  // the second or both. You'd have to catch all cases in the if else statements eh.
+  // Nicknames might also be safe as long as they are unique!
+  // 
+  // If you do decide to change this, change fname to the ID of the input tag that you want
+  // and everything should work na. Don't forget to change the values sa if-else tags sa baba
   var name = document.getElementById("fname").value
+
+
   var userform = document.getElementById("inputs");
   var subbutton = document.getElementById("submitButton");
   var mid = document.getElementById("middle")
@@ -27,20 +42,15 @@ async function submit() {
   calculating.id = "calcu1"
   var text3 = document.createTextNode("calculating...");
   calculating.id = "calcu2"
-  // var image = document.createElement('IMG');
-  // image.src = 'calculating.GIF'; 
+
+  // remove the form and submit button and replace it with the calculating... text
   userform.remove();
   subbutton.remove();
-
   calculating.appendChild(text1);
-  // mid.appendChild(image)
-
-  
- 	
   mid.appendChild(calculating)
 
-  // await sleep(10000);
-
+// cycle calculating... calculating.. and calculating.  
+// Yes thats not a gif thats just text HAHAHA
   for (let i = 0; i < 6; i++) {
   	await sleep(600);
   	calculating.remove()
@@ -54,16 +64,23 @@ async function submit() {
     	calculating.replaceChild(text1,text3)
     }
     mid.appendChild(calculating)
-    
   }
 
 
+// Prints name to console. Mainly used for checking lang. To see the console
+// Right click -> Inspect -> console and the name you wrote should pop up there
   console.log(name)
-  	if(name == "Dodan"){
+
+  // Since we're using names here I used the toLowerCase so capitalization won't affect
+  // the result of the user input. I advise to leave the else statement to go to
+  // a webpage that tells the applicant to try again. It might make them go somewhere
+  // where they shouldn't kasi. In this case for the base code I wrote Jordanne instead of
+  // Dodan. It might send me to gryffindor but I should be in ravenclaw.
+  	if(name.toLowerCase() == "dodan"){
     	location.href = "ravenclaw.html";}
-	else if(name == "Ryan"){
+	else if(name.toLowerCase() == "ryan"){
 	location.href = "hufflepuff.html";
-	}else if(name == "Ronel"){
+	}else if(name.toLowerCase() == "ronel"){
 	location.href = "slytherin.html";
 	}else{
 	location.href = "gryffindor.html"
@@ -73,6 +90,12 @@ async function submit() {
 
 <body>
 
+		<!-- 
+		Edit within the div class col text-center so its centered. If you want to add another
+		text form element copy paste the line <label>First Name:</label><br> and the line below it 
+		and change the ID in the input tag to whatever you want. Follow instructions above!
+		If you're having trouble with stuff my contact info is in index.html hehe
+		 -->
 	<div class = "col" style = "height:33%"></div>
 	<div class = "row">
 		<div class = "col"></div>
