@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('//fonts.googleapis.com/css?family=Quicksand"');
 
 button{
-  background-color: #ffffcc;
+  background-color: #27150c;
   color: black;
   text-align: center;
   cursor: pointer;
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'Quicksand';
   border-radius: 40px;
   padding: 10px 40px 10px 40px;
   border:none;
@@ -14,7 +14,7 @@ button{
 
 html, body {
   height: 100%;
-  background-color: #ccffff;
+  background-color: #f4edd2;
 }
 
 .full-height {
@@ -27,12 +27,12 @@ html, body {
 
 
 .title{
-	font-family: 'Permanent Marker', cursive;
+	font-family: 'Quicksand';
 	font-size: 60px;
 }
 
 h1{
-	font-family: 'Permanent Marker', cursive;
+	font-family: 'Quicksand';
 }
 
 /*.rounded{
